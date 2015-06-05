@@ -11,6 +11,8 @@ RUN apt-get update \
  && cd / \
  && rm -rf /tmp/supervisor \
  && apt-get purge -y python-setuptools \
+ && apt-get install -y --no-install-recommends python-pkg-resources \
+ && apt-get autoremove \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
  && mkdir -p /var/log/supervisor
