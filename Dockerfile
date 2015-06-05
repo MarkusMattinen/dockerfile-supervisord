@@ -12,7 +12,8 @@ RUN apt-get update \
  && rm -rf /tmp/supervisor \
  && apt-get purge -y python-setuptools \
  && apt-get clean \
- && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
+ && mkdir -p /var/log/supervisor
 
 ADD config/etc/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
 
