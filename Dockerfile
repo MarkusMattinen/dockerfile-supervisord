@@ -8,6 +8,7 @@ RUN apt-get update \
  && cd /tmp/supervisor \
  && easy_install . \
  && ln -sf /usr/local/bin/supervisord /usr/bin/supervisord \
+ && ln -sf /usr/local/bin/pidproxy /usr/bin/pidproxy \
  && cd / \
  && rm -rf /tmp/supervisor \
  && apt-get purge -y python-setuptools \
