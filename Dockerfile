@@ -4,7 +4,7 @@ MAINTAINER Markus Mattinen <markus@gamma.fi>
 
 RUN apt-get update \
  && apt-get install -y --no-install-recommends python-setuptools \
- && git clone https://github.com/MarkusMattinen/supervisor.git -b append_timestamp /tmp/supervisor \
+ && git clone https://github.com/MarkusMattinen/supervisor.git -b prepend-timestamp /tmp/supervisor \
  && cd /tmp/supervisor \
  && easy_install . \
  && ln -sf /usr/local/bin/supervisord /usr/bin/supervisord \
